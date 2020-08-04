@@ -1,6 +1,7 @@
 package org.timeSheet.controllers;
 
 import javax.servlet.http.HttpSession;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,6 @@ public class TaskController {
 		 }
 		 String email = (String) session.getAttribute("email");
 		 taskService.addTask(task, userService.findOne(email));
-		 
 		return  "redirect:/users";
 	 }
 }
